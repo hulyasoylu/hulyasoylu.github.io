@@ -1,66 +1,117 @@
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <html lang="en">
+
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="/favicon">
-    
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <title>KARGEDER</title>
+  <meta name="author" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="fullPage plugin by Alvaro Trigo. Create fullscreen pages fast and simple. One page scroll jquery plugin like iPhone 5 website." />
+  <meta name="keywords"  content="" />
+  <meta name="Resource-type" content="Document" />
 
 
-    <title>KARGEDER</title>
+  <link rel="stylesheet" type="text/css" href="http://alvarotrigo.com/fullPage/jquery.fullPage.css" />
+  <link rel="stylesheet" type="text/css" href="http://alvarotrigo.com/fullPage/example3.css" />
 
-    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
-    <link href="stylesheets/justified-nav.css" rel="stylesheet">
-    <script src="javascripts/jquery-1.11.0.min.js"></script>
-    <script src="javascripts/bootstrap.min.js"></script>
+   <!--[if IE]>
+    <script type="text/javascript">
+       var console = { log: function() {} };
+    </script>
+  <![endif]-->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="http://alvarotrigo.com/fullPage/vendors/jquery.easings.min.js"></script> 
+  
+  <script type="text/javascript" src="http://alvarotrigo.com/fullPage/jquery.fullPage.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+        anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+        menu: '#menu'
+      });
+      
+      $('#showExamples').click(function(e){
+        e.stopPropagation();
+        $('#examplesList').toggle();
+      });
+      
+      $('html').click(function(){
+        $('#examplesList').hide();
+      });
+    });
+  </script>
 
 
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
-    <div class="container">
-      <div class="collapse navbar-collapse">
-        <h3 class="text-muted">KARGEDER: Karadeniz Araştırma ve Geliştirme Derneği</h3>
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Ana Sayfa</a></li>
-          <li><a href="#">Eğitim</a></li>
-          <li><a href="#">Yayınlar</a></li>
-          <li><a href="#">Hizmetler</a></li>
-          <li><a href="#">Projeler</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">KARGEDER
-              <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Vizyonumuz ve Misyonumuz</a></li>
-              <li><a href="#">Kurucu Üye Protokolü</a></li>
-              <li><a href="#">Yönetim Kurulum Üyeleri</a></li>
-              <li><a href="#">Tüzük</a></li>
-              <li><a href="#">Üyelik Formu</a></li>
-              <li><a href="#">Haberler</a></li>
-              <li><a href="#"></a></li>
-              <li class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-          <li><a href="#">İletişim</a></li>
-          <li><a href="#">Forum</a></li>
-        </ul>
-      </div>
 
-      <!-- Jumbotron -->
-      <div class="jumbotron">
+
+  <a href="https://github.com/hulyasoylu/kargeder.github.io"><img style="position: fixed;z-index:99; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://alvarotrigo.com/fullPage/" data-text="kargeder">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<ul id="menu">
+  <li data-menuanchor="anasayfa" class="active"><a href="#anasayfa">Ana Sayfa</a></li>
+  <li data-menuanchor="hizmetler"><a href="#hizmetler">Hizmetler</a></li>
+  <li data-menuanchor="iletisim"><a href="#iletisim">İletişim</a></li>
+  <li data-menuanchor="forum"><a href="#forum">Forum</a></li>
+</ul>
+
+
+
+<div id="fullpage">
+
+  <div class="section active" id="section0">
+    <h1>KARGEDER</h1>
+    <h2>Karadeniz Araştırma ve Geliştirme Derneği</h2>
+    <div id="download"><a href="https://github.com/hulyasoylu/kargeder.github.io/archive/master.zip">Download</a></div><br />
+    <img src="http://alvarotrigo.com/fullPage/imgs/fullPage.png" alt="fullPage" height="243" width="282" />
+   
+
+  </div>
+
+  <div class="section" id="section1">
+      <div class="slide active">
+      <div class="intro">
+        <h1>Eğitim</h1>
+        <p>Eğitim programı hazırlık aşamasında.</p>
+        <img src="http://alvarotrigo.com/fullPage/imgs/slider.png" alt="slider" height="132" width="662" />
+      </div>
+      
+    </div>
+
+      <div class="slide">
+      <div class="intro">
+        <img src="http://alvarotrigo.com/fullPage/imgs/1.png" alt="simple" height="176" width="176" />
+        <h1>Yayınlar</h1>
+        <p>Henüz gösterilecek bir yayın yok.</p>
+      </div>
+    </div>
+      
+       <div class="slide">
+      <div class="intro">
+        <img src="http://alvarotrigo.com/fullPage/imgs/2.png" alt="Cool" height="176" width="176" />
+        <h1>Projeler</h1>
+        <p>İlk proje yapım aşamasında.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="intro">
+        <img src="http://alvarotrigo.com/fullPage/imgs/3.png" alt="Compatible" height="176" width="176" />
+        <h1>Haberler</h1>
+        <p>Haberleri görebilmek için üye olmanz gerekmekte.</p>
+
+
+
+         <div class="jumbotron">
   <h3>KARGEDER Form</h3>
         <p class="lead">
         <script src="http://www.form2pay.com/publish/js/138627" 
@@ -74,7 +125,83 @@
         <p><a class="btn btn-lg btn-success" href="#" role="button">Başlayalım</a></p>
       </div>
 
-      <!-- Example row of columns -->
-      
-  </body>
+
+
+
+
+      </div>
+    </div>
+
+    </div>
+  <div class="section" id="section2">
+    <div class="intro">
+      <h1>İletişim</h1>
+      <p>HTML markup example to define 4 sections.</p>
+      <img src="images/iletisim-formu.jpg" alt="example" height="154" width="494" />
+    </div>
+  </div>
+
+  <div class="section" id="section3">
+    <div class="intro">
+      <h1>Forum</h1>
+      <p>
+       Forum sayfası yapım aşamasında.
+        <br /><br /><br /><br /><br /><br />
+      </p>
+    </div>
+    <img src="kargeder.jpg" alt="tablets" height="372" width="843" />
+  </div>
+</div>
+
+<div id="infoMenu">
+  <ul>
+    <li><a href="https://github.com/hulyasoylu/hulyasoylu.github.io/archive/master.zip>Download</a></li>
+    <li>
+      <a href="#" id="showExamples">Examples</a>
+      <div id="examplesList">
+        <div class="column">
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="http://alvarotrigo.com/fullPage/examples/navigationV.html">Vertical navigation dots</a></li>
+            <li><a href="http://alvarotrigo.com/fullPage/examples/navigationH.html">Horizontal navigation dots</a></li>
+            <li><a href="http://alvarotrigo.com/fullPage/examples/normalScroll.html">Normal scrolling</a></li>
+            <li><a href="http://alvarotrigo.com/fullPage/examples/noAnchor.html">Without anchor links (same URL)</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h3>Design</h3>
+          <ul>
+            <li><a href="http://alvarotrigo.com/fullPage/examples/backgrounds.html">Full backgrounds</a></li>
+            <li><a href="http://alvarotrigo.com/fullPage/examples/gradientBackgrounds.html">Gradient backgrounds</a></li>
+            <li><a href="http://alvarotrigo.com/fullPage/examples/scrolling.html#secondPage">Scrolling inside sections and slides</a></li>
+            <li><a href="http://alvarotrigo.com/fullPage/examples/fixedHeaders.html">Adding fixed header and footer</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h3>Callbacks</h3>
+          <ul>
+            <li><a href="examples/apple.html">Animations on scrolling</a></li>
+          </ul>
+        </div>
+      </div>
+    
+    </li>
+    <li><a href="https://github.com/hulyasoylu/hulyasoylu.github.io">Documentation</a></li>
+ 
+  </ul>
+  
+</div>
+
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+    
